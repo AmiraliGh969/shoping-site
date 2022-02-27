@@ -13,7 +13,7 @@ const mutations = {
 
 const actions = {
   registerUser(context, registerData) {
-    client.post('auth/login', registerData)
+    client.post('users', registerData)
       .then(response => {
         if (response.status === 200) {
           console.log(response);

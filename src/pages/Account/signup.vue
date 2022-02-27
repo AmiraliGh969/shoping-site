@@ -9,6 +9,7 @@
                 <input type="text" v-model="name" class="form-control mt-3 me-1" placeholder="First name">
                 <input type="text" v-model="family" class="form-control mt-3 ms-1" placeholder="Last name">
               </div>
+              <input type="text" v-model="username" class="form-control mt-3" placeholder="Username" >
               <input type="text" v-model="email" class="form-control mt-3" placeholder="Email address" >
               <input type="password" v-model="password" class="form-control mt-3" placeholder="Password" >
               <input type="password" class="form-control mt-3" placeholder="Repeat the password" >
@@ -30,16 +31,20 @@ export default {
       email: "",
       password: "",
       address: "",
+      username: "",
     };
   },
   methods: {
     registerUser() {
       const register = {
-        firstname: this.name,
-        lastname: this.family,
+        name: {
+          firstname: this.name,
+          lastname: this.family,
+        },
+        username: this.username,
         email: this.email,
         password: this.password,
-        address: this.address,
+        // address: this.address,
       };
       this.$store.dispatch("registerUser", register);
     },
