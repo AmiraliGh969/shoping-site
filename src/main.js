@@ -10,13 +10,15 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import BootstrapVue from "bootstrap-vue";
 
 
-library.add(faUserSecret)
-library.add(faUser)
-library.add(faLock)
-library.add(faShoppingCart)
-library.add(faEye)
-library.add(faAngleRight)
-library.add(faAngleLeft)
+library.add(
+  faUserSecret,
+  faUser,
+  faLock,
+  faShoppingCart,
+  faEye,
+  faAngleRight,
+  faAngleLeft)
+
 
 Vue.config.productionTip = false
 
@@ -26,7 +28,6 @@ Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './css/main-css.css'
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

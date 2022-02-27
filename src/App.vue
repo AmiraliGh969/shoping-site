@@ -1,25 +1,22 @@
 <template>
-  <div id="app" dir="rtl">
+  <div id="app">
     <Header/>
-    <router-view v-slot="{ Component }">
-      <transition enter-active-class="animate__animated animate__fadeIn">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+      <router-view class="animate__animated animate__fadeIn">
+      </router-view>
     <Footer/>
   </div>
 </template>
 
 <script>
+import "animate.css";
 import Header from "./pages/shared/Header";
 import Footer from "./pages/shared/Footer";
-import "animate.css";
 export default {
   name: "App",
   components: {
-     Header,
-    Footer
-  }
+    Header,
+    Footer,
+  },
 };
 </script>
 

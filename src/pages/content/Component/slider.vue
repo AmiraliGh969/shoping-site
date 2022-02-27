@@ -5,9 +5,9 @@
         <b-carousel
           id="carousel-1"
           v-model="slide"
-          fade
           indicators
           controls
+          fade
           img-width="1024"
           img-height="480"
           ref="myCarousel"
@@ -17,17 +17,19 @@
 
           <b-carousel-slide class="carousel-content" v-for="(slider, index) in sliders" :key="slider.id" :class="{active:index == 1}">
             <template #img>
-              <div class="row">
+              <div class="row my-4">
                 <div class="col-md-6 justify-content-center d-flex">
-                  <img
-                  class="d-block w-50 h-100"
-                  :src="slider.image"
-                  alt="image slot">
+                  <router-link :to="`/Products/Single/${slider.id}`">
+                    <img
+                    class="d-block image-form-slider"
+                    :src="slider.image"
+                    alt="image slot">
+                  </router-link>
                 </div>
                 <div class="col-md-5 text-end py-5">
-                  <h4><strong>{{ slider.title }}</strong></h4>
+                  <h4 class="title-from-slider"><strong>{{ slider.title }}</strong></h4>
                   <br>
-                  <p>{{ slider.description }}</p>
+                  <p class="discription-from-slider">{{ slider.description }}</p>
                 </div>
               </div>
             </template>
@@ -52,13 +54,6 @@ export default {
     onSlideEnd() {
       this.sliding = false;
     },
-    goNext() {
-      console.log("....>", this.$refs.myCarousel);
-      this.$refs.myCarousel.next();
-    },
-    goPrev() {
-      this.$refs.myCarousel.prev();
-    },
   },
   computed: {
     sliders() {
@@ -66,7 +61,9 @@ export default {
     },
   },
   created() {
-    this.$store.dispatch("getSliderFromServer");
+    if (this.sliders.length == 0) {
+      this.$store.dispatch("getSliderFromServer");
+    }
   },
 };
 </script>

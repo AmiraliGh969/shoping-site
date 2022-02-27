@@ -1,3 +1,7 @@
+
+a {
+  text-decoration: none !important;
+}
 .header-parent {
   font-weight: bold;
 }
@@ -96,28 +100,100 @@
   border-radius: 5px;
 }
 .product-slider-btn {
-  background: orange;
-  width: 35px;
-  height: 35px;
+  background: rgb(231, 231, 231);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  border-radius: 5px;
   margin: 5px;
-}
-.product-slider-btn:hover  {
-  background: linear-gradient(to bottom right, black, orange);
-}
-.product-slider-btn a {
   text-decoration: none;
   color: black;
+  border-top: 2px solid black;
+  border-right: 3px solid orange;
+  border-left: 3px solid black;
+  border-bottom: 2px solid orange;
+  transition: .2s;
 }
-.product-slider-btn:hover a {
+.product-slider-btn:hover  {
   color: orange;
 }
 .carousel-content {
   margin-top: 20px;
   background:white !important;
+}
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+}
+.card {
+  height: 400px;
+  width: 290px;
+}
+.card-text {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+.image-form-slider {
+  height: 300px !important;
+}
+.carousel-indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: black;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  transition: opacity .6s ease;
+}
+.discription-from-slider {
+  height: 165px;
+}
+.title-from-slider {
+  height: 50px;
+}
+.carousel-control-next {
+  display: flex;
+  justify-content: end;
+}
+.carousel-control-prev {
+  display: flex;
+  justify-content: start;
+}
+.image-for-single-page {
+  border-radius: 20px;
+  width: 400px;
+  height: 350px;
+  object-fit: contain;
+}
+.number-input-single-page {
+  width: 11%;
+}
+.login-form {
+  margin: 70px 0px;
+  width: 100%;
+  border-bottom: 4px solid orange ;
+}
+.signup-form {
+  margin: 70px 0px;
+  width: 100%;
+  border-bottom: 4px solid orange ;
+}
+
+@media only screen and (max-width: 426px) {
+  .card {
+    width: 100%;
+  }
 }

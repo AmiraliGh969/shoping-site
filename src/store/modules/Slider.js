@@ -1,7 +1,7 @@
 import { client } from "../../api/client";
 
 const state = {
-  sliders: []
+  sliders: [],
 };
 
 const getters = {

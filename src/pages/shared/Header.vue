@@ -4,16 +4,16 @@
       <div class="col-md-6 col-6 align-items-center">
         <ul class="nav">
           <li class="mx-2 link">
-            <a href="#">
-            <font-awesome-icon icon="lock"/>
+            <router-link to="/signup">
+              <font-awesome-icon icon="lock"/>
               ثبت نام
-            </a>
+            </router-link>
           </li>
           <li class="mx-2 link">
-            <a href="#">
-            <font-awesome-icon icon="user"/>
+            <router-link to="/logIn">
+              <font-awesome-icon icon="user"/>
               ورود
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -30,10 +30,10 @@
               <router-link to="/" active-class="active" exact>خانه</router-link>
             </li>
             <li class="link">
-              <router-link to="/product1" active-class="active">محصولات</router-link>
+              <router-link to="/products/women's clothing" active-class="active">محصولات</router-link>
             </li>
             <li class="link">
-              <router-link to="/AboutUs">درباره ما</router-link>
+              <router-link to="/aboutUs">درباره ما</router-link>
             </li>
             <li class="link">
                 <a href="#">
@@ -47,5 +47,4 @@
   </div>
 </template>
 <script>
-
 </script>
