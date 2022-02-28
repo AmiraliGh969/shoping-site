@@ -23,11 +23,6 @@ const actions = {
         console.log(data);
       })
   },
-
-
-
-
-
 };
 
 export default {
