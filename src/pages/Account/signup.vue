@@ -31,35 +31,21 @@
   </div>
 </template>
 <script>
+import {registerData} from "../../constant/variables";
+
 export default {
   data() {
     return {
-      form:{
-        email:'',
-        username:'',
-        password:'',
-        name: {
-          firstname: '',
-          lastname: ''
-        },
-        address:{
-          city:'',
-          street:'',
-          number:'',
-          zipcode:'',
-          geolocation:{
-            lat:'',
-            long:''
-          }
-        },
-        phone:''
-      }
+      form: JSON.parse(registerData)
     };
   },
   methods: {
     registerUser() {
       const register = this.form
-      this.$store.dispatch("registerUser", register);
+      this.$store.dispatch("registerUser", register).then(()=>{
+        alert('success register');
+        this.form= JSON.parse(registerData);
+      });
     },
   },
 };

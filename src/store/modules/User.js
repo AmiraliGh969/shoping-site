@@ -15,10 +15,7 @@ const actions = {
   registerUser(context, registerData) {
     client.post('users', registerData)
       .then(response => {
-        if (response.status === 200) {
-          console.log(response);
-          alert("hello")
-        }
+         return response;
       }, data => {
         console.log(data);
       })
