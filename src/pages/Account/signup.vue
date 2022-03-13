@@ -44,44 +44,16 @@ import {email, required, minLength} from "vuelidate/lib/validators";
 export default {
   data() {
     return {
-<<<<<<< HEAD
-      form: {
-        email: "",
-        username: "",
-        password: "",
-        name: {
-          firstname: "",
-          lastname: "",
-        },
-        address: {
-          city: "",
-          street: "",
-          number: "",
-          zipcode: "",
-          geolocation: {
-            lat: "",
-            long: "",
-          },
-        },
-        phone: "",
-      },
-=======
       form: JSON.parse(registerData)
->>>>>>> 3455df04ae3345e339f86f862e2eff7e7613ab9f
     };
   },
   methods: {
     registerUser() {
-<<<<<<< HEAD
-      const register = this.form;
-      this.$store.dispatch("registerUser", register);
-=======
       const register = this.form
       this.$store.dispatch("registerUser", register).then(() => {
         alert('success register');
         this.form = JSON.parse(registerData);
       });
->>>>>>> 3455df04ae3345e339f86f862e2eff7e7613ab9f
     },
   },
   validations: {
