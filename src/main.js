@@ -28,6 +28,8 @@ Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './css/main-css.css'
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
