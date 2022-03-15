@@ -201,3 +201,6 @@ a {
 .error-input{
   border:1px solid red;
 }
+.error-text {
+  color: red;
+}
