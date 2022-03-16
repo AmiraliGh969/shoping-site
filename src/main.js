@@ -1,13 +1,13 @@
-/* Vue */
+
 import Vue from 'vue'
 import router from './router';
-// import VueResource from 'vue-resource'
 import App from './App'
 import {store} from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret, faUser, faLock, faShoppingCart, faEye, faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import BootstrapVue from "bootstrap-vue";
+import Vuelidate from 'vuelidate'
 
 
 library.add(
@@ -24,17 +24,15 @@ Vue.config.productionTip = false
 
 Vue.component('FontAwesomeIcon', FontAwesomeIcon)
 Vue.use(BootstrapVue);
+Vue.use(Vuelidate);
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './css/main-css.css'
-import Vuelidate from 'vuelidate'
-Vue.use(Vuelidate)
-/* eslint-disable no-new */
+
+
 new Vue({
   el: '#app',
-  // Attach the Vue instance to the window,
-  // so it's available globally.
   created: function () {
     window.Vue = this
   },

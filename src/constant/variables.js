@@ -1,4 +1,4 @@
-export const registerData=JSON.stringify({
+export const registerData = JSON.stringify({
     email:'',
     username:'',
     password:'',

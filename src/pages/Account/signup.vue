@@ -6,7 +6,7 @@
           <h2><strong>Sign up new account:</strong></h2>
           <form action="#" class="d-flex flex-column">
             <div class="d-flex flex-row">
-            <FristNameInputSlug />
+            <FristNameInputSlug :form="$v.form" />
             <div class="flex-column w-50 ms-1">
               <input type="text" v-model="$v.form.name.lastname.$model"
                 :class="{'error-input':!$v.form.name.lastname.required && $v.form.name.lastname.$dirty}"
@@ -93,7 +93,7 @@
             </div>
             <br>
             <!-- <button @click.prevent="$v.form.$touch"  type="submit" class="btn btn-success my-2">Sing up</button> -->
-            <button @click.prevent="registerUser"  type="submit" class="btn btn-success my-3">Sing up</button>
+            <button @click.prevent="registerUser" :disabled="$v.$invalid" class="btn btn-success my-3" type="submit">Sing up</button>
           </form>
         </div>
       </div>
