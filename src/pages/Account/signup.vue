@@ -14,6 +14,9 @@
               <div class="error-text ms-1" v-if="!$v.form.name.lastname.required && $v.form.name.lastname.$dirty">
                 Lastname is required
               </div>
+              <div class="error-text ms-1" v-if="!$v.form.name.lastname.alpha">
+                This section must be letters
+              </div>
             </div>
             </div>
             <input type="email" v-model="$v.form.email.$model" 
@@ -23,6 +26,9 @@
             <div class="error-text ms-1" v-if="!$v.form.email.required && $v.form.email.$dirty">
               Email is required
             </div>
+            <div class="error-text ms-1 mt-1" v-if="!$v.form.email.email">
+              This email in not valid
+            </div>
             <input type="text" v-model="$v.form.username.$model" 
               class="form-control mt-3" placeholder="Username"
               :class="{'error-input':!$v.form.username.required && $v.form.username.$dirty}" 
@@ -30,13 +36,17 @@
             <div class="error-text ms-1" v-if="!$v.form.username.required && $v.form.username.$dirty">
               Username is required
             </div>
+            <div class="error-text ms-1" v-if="!$v.form.username.alpha">
+              This section must be letters
+            </div>
             <input type="password" v-model="$v.form.password.$model" 
               class="form-control mt-3" placeholder="Password"
               :class="{'error-input':!$v.form.password.required && $v.form.password.$dirty}" 
               >
-            <div class="error-text ms-1" v-if="!$v.form.password.required && $v.form.password.$dirty">
-              Password is required
-            </div>
+            <div class="error-text" v-if="!$v.form.password.required && $v.form.password.$dirty">Field is required</div>
+            <div class="error-text" v-if="!$v.form.password.minLength">Pasword must have at least {{$v.form.password.$params.minLength.min}} letters.</div>
+
+
             <input id="city" type="text" v-model="$v.form.address.city.$model" 
               :class="{'error-input':!$v.form.address.city.required && $v.form.address.city.$dirty}" 
               class="form-control mt-3" placeholder="city">
@@ -54,6 +64,9 @@
               class="form-control mt-3"
               :class="{'error-input':!$v.form.address.number.required && $v.form.address.number.$dirty}" 
               placeholder="number">
+            <div class="error-text ms-1" v-if="!$v.form.address.number.numeric">
+              This section must be numbers
+            </div>
             <div class="error-text ms-1" v-if="!$v.form.address.number.required && $v.form.address.number.$dirty">
               Street is required
             </div>

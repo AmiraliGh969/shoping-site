@@ -6,6 +6,9 @@
       <div class="error-text ms-1" v-if="!$v.form.name.firstname.required && $v.form.name.firstname.$dirty">
           Fristname is required
       </div>
+      <div class="error-text ms-1" v-if="!$v.form.name.firstname.alpha">
+        This section must be letters
+      </div>
   </div>
 </template>
 <script>

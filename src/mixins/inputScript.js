@@ -1,4 +1,4 @@
-import {email, required, minLength} from "vuelidate/lib/validators";
+import {email, required, minLength, alpha, numeric} from "vuelidate/lib/validators";
 import {registerData} from "../constant/variables";
 export const inputScript = {
   data() {
@@ -19,16 +19,16 @@ export const inputScript = {
   validations: {
     form: {
       email: {required, email},
-      username: {required},
+      username: {required, alpha},
       password: {required, minLength: minLength(6)},
       name: {
-        firstname: {required},
-        lastname: {required}
+        firstname: {required, alpha},
+        lastname: {required, alpha}
       },
       address:{
         city:{required},
         street:{required},
-        number:{required},
+        number:{required, numeric},
         zipcode:{required},
         geolocation:{
           lat:{required},
