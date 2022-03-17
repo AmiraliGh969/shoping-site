@@ -102,7 +102,7 @@
 </template>
 <script>
 import FristNameInputSlug from '../inputs/firstNameInputSlug.vue'
-import {inputScript} from '../../mixins/inputScript'
+import {inputScript} from '../../mixins/signInScripts'
 export default {
   mixins: [inputScript],
   components: {

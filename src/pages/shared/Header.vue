@@ -10,7 +10,7 @@
             </router-link>
           </li>
           <li class="mx-2 link">
-            <router-link to="/logIn">
+            <router-link to="/Login">
               <font-awesome-icon icon="user"/>
               ورود
             </router-link>

@@ -4,7 +4,7 @@
         <div class="login-form">
           <h2> <strong> Login to account : </strong> </h2>
           <form action="#">
-            <input type="email" placeholder="Email Address" class="form-control w-25 mt-3" />
+            <input type="text" placeholder="Username" class="form-control w-25 mt-3" />
             <input type="password" placeholder="Password" class="form-control w-25 mt-3" />
             <div class="form-check mt-3">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -20,5 +20,21 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      usename: "",
+      password: ""
+    }
+  },
+  methods: {
+    loginUser() {
+      const login = {
+        usename: this.usename,
+        password: this.password
+      };
+      this.$store.dispatch("loginUser", login)
+    }
+  },
+};
 </script>

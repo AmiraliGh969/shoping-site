@@ -8,6 +8,7 @@ import { faUserSecret, faUser, faLock, faShoppingCart, faEye, faAngleRight, faAn
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import BootstrapVue from "bootstrap-vue";
 import Vuelidate from 'vuelidate'
+import VueCookie from 'vue-cookie'
 
 
 library.add(
@@ -25,6 +26,8 @@ Vue.config.productionTip = false
 Vue.component('FontAwesomeIcon', FontAwesomeIcon)
 Vue.use(BootstrapVue);
 Vue.use(Vuelidate);
+Vue.use(VueCookie);
+
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
