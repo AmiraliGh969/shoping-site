@@ -36,9 +36,7 @@
               <router-link to="/aboutUs">درباره ما</router-link>
             </li>
             <li class="link">
-                <a href="#">
-                  سبد خرید
-                </a>
+              <router-link to="/shopCart">سبد خرید</router-link>
             </li>
         </ul>
       </div>

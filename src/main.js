@@ -4,7 +4,7 @@ import router from './router';
 import App from './App'
 import {store} from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faUser, faLock, faShoppingCart, faEye, faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faUser, faLock, faShoppingCart, faEye, faAngleRight, faAngleLeft, faWindowClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import BootstrapVue from "bootstrap-vue";
 import Vuelidate from 'vuelidate'
@@ -18,7 +18,8 @@ library.add(
   faShoppingCart,
   faEye,
   faAngleRight,
-  faAngleLeft)
+  faAngleLeft,
+  faWindowClose)
 
 
 Vue.config.productionTip = false

@@ -6,6 +6,7 @@ import AboutUs from './pages/aboutUs/AboutUs.vue'
 import SingleProduct from './pages/singlePages/singlePages.vue'
 import logIn from './pages/Account/LogIn.vue'
 import signup from './pages/Account/signup.vue'
+import shopCart from './pages/shopCarts/userShopCarts.vue'
 Vue.use(Router)
 let routes = new Router(
   {
@@ -42,6 +43,10 @@ let routes = new Router(
       {
         path: "/signup",
         component: signup
+      },
+      {
+        path: "/shopCart",
+        component: shopCart
       }
     ]
    }
