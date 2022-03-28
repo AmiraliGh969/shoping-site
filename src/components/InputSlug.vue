@@ -14,7 +14,7 @@ export default {
       e.preventDefault()
     },
     handle(e){
-       let value=e.target.value
+      let value=e.target.value
       if(value.length>0){
        value=value.charAt(0).toUpperCase()+value.slice(1)
       }

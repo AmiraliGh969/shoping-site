@@ -4,7 +4,7 @@
     <br>
     <div class="row">
       <div class="col-md-3 my-2" v-for="product in MostSellProducts" :key="product.id">
-        <div class="card text-center p-2">
+        <!-- <div class="card text-center p-2">
           <router-link :to="`/products/single/${product.id}`">
             <img :src="product.image" class="card-img-top">
           </router-link>
@@ -28,17 +28,22 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
+      <boxProduct :id="product.id" :image="product.image" :title="product.title" :price="product.price" />
       </div>
     </div>
   </div>
 </template>
 <script>
+import boxProduct from '../../../components/boxProduct.vue'
 export default {
   computed: {
     MostSellProducts() {
       return this.$store.getters.GetMostSellProducts;
     },
+  },
+  components: {
+    boxProduct
   },
   created() {
     if (this.MostSellProducts.length == 0) {

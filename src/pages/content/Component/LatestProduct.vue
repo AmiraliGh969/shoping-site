@@ -3,7 +3,7 @@
     <h4 class="text-center text-warning ">جدید ترین  محصولات</h4>
     <br>
     <div class="col-md-3 mt-3" v-for="product in LatestProduct" :key="product.productID">
-      <div class="card text-center p-2" >
+      <!-- <div class="card text-center p-2" >
         <router-link :to="`/products/single/${product.id}`">
           <img :src="product.image" class="card-img-top">
         </router-link>
@@ -29,18 +29,22 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
+      <boxProduct :id="product.id" :image="product.image" :title="product.title" :price="product.price" />
     </div>
   </div>
 </template>
 <script>
+import boxProduct from '../../../components/boxProduct.vue'
 export default {
   computed: {
     LatestProduct() {
       return this.$store.getters.GetLatestProduct;
     },
   },
-
+  components: {
+    boxProduct
+  },
   created() {
     if (this.LatestProduct.length == 0) {
       this.$store.dispatch("GetLatestProductFromServer");

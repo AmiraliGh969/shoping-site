@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row my-5">
     <div class="col-md-3 mt-3" v-for="MoreProduct in FillterMoreProduct" :key="MoreProduct.MoreProductID">
-      <div class="card text-center p-2" >
+      <!-- <div class="card text-center p-2" >
         <router-link :to="`/products/single/${MoreProduct.id}`">
           <img :src="MoreProduct.image" class="card-img-top">
         </router-link>
@@ -28,10 +28,11 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
+      <boxProduct :id="MoreProduct.id" :image="MoreProduct.image" :title="MoreProduct.title" :price="MoreProduct.price" />
     </div>
     <div class="col-md-3 mt-3" v-for="MoreProduct in FillterMoreProduct" :key="MoreProduct.MoreProductID">
-      <div class="card text-center p-2" >
+      <!-- <div class="card text-center p-2" >
         <router-link :to="`/products/single/${MoreProduct.id}`">
           <img :src="MoreProduct.image" class="card-img-top">
         </router-link>
@@ -57,7 +58,9 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
+      <boxProduct :id="MoreProduct.id" :image="MoreProduct.image" :title="MoreProduct.title" :price="MoreProduct.price" />
+
     </div>
     <div class="row mt-2">
       <div class="col-md-12 d-flex">
@@ -71,11 +74,15 @@
 </div>
 </template>
 <script>
+import boxProduct from '../../components/boxProduct.vue'
 export default {
   computed: {
     FillterMoreProduct() {
       return this.$store.getters.GetMoreProduct;
     },
+  },
+  components: {
+    boxProduct
   },
   created() {
     this.loadProducts();
