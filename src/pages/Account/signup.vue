@@ -70,8 +70,7 @@
               placeholder="Username"
               :class="{
                 'error-input':
-                  !$v.form.username.required && $v.form.username.$dirty,
-              }"
+                  !$v.form.username.required && $v.form.username.$dirty,}"
             />
             <div
               class="error-text ms-1"
@@ -89,8 +88,7 @@
               placeholder="Password"
               :class="{
                 'error-input':
-                  !$v.form.password.required && $v.form.password.$dirty,
-              }"
+                  !$v.form.password.required && $v.form.password.$dirty,}"
             />
             <div
               class="error-text"
@@ -109,17 +107,13 @@
               v-model="$v.form.address.city.$model"
               :class="{
                 'error-input':
-                  !$v.form.address.city.required && $v.form.address.city.$dirty,
-              }"
+                  !$v.form.address.city.required && $v.form.address.city.$dirty}"
               class="form-control mt-3"
               placeholder="city"
             />
             <div
               class="error-text ms-1"
-              v-if="
-                !$v.form.address.city.required && $v.form.address.city.$dirty
-              "
-            >
+              v-if="!$v.form.address.city.required && $v.form.address.city.$dirty">
               City is required
             </div>
             <input
@@ -130,41 +124,26 @@
               :class="{
                 'error-input':
                   !$v.form.address.street.required &&
-                  $v.form.address.street.$dirty,
-              }"
+                  $v.form.address.street.$dirty}"
               placeholder="street"
             />
             <div
               class="error-text ms-1"
-              v-if="
-                !$v.form.address.street.required &&
-                $v.form.address.street.$dirty
-              "
-            >
+              v-if="!$v.form.address.street.required && $v.form.address.street.$dirty" >
               street is required
             </div>
-            <input
+            <InputNumber
               id="number"
-              type="text"
               v-model="$v.form.address.number.$model"
               class="form-control mt-3"
               :class="{
-                'error-input':
-                  !$v.form.address.number.required &&
-                  $v.form.address.number.$dirty,
-              }"
-              placeholder="number"
-            />
+                'error-input': !$v.form.address.number.required && $v.form.address.number.$dirty,}" />
             <div class="error-text ms-1" v-if="!$v.form.address.number.numeric">
               This section must be numbers
             </div>
             <div
               class="error-text ms-1"
-              v-if="
-                !$v.form.address.number.required &&
-                $v.form.address.number.$dirty
-              "
-            >
+              v-if=" !$v.form.address.number.required && $v.form.address.number.$dirty">
               Street is required
             </div>
             <input
@@ -172,19 +151,12 @@
               type="text"
               v-model="$v.form.address.zipcode.$model"
               class="form-control mt-3"
-              :class="{
-                'error-input':
-                  !$v.form.address.zipcode.required &&
-                  $v.form.address.zipcode.$dirty,
-              }"
+              :class="{'error-input':!$v.form.address.zipcode.required && $v.form.address.zipcode.$dirty}"
               placeholder="zipcode"
             />
             <div
               class="error-text ms-1"
-              v-if="
-                !$v.form.address.zipcode.required &&
-                $v.form.address.zipcode.$dirty
-              "
+              v-if=" !$v.form.address.zipcode.required && $v.form.address.zipcode.$dirty"
             >
               Zipcode is required
             </div>
@@ -196,17 +168,12 @@
               :class="{
                 'error-input':
                   !$v.form.address.geolocation.lat.required &&
-                  $v.form.address.geolocation.lat.$dirty,
-              }"
+                  $v.form.address.geolocation.lat.$dirty,}"
               placeholder="lat"
             />
             <div
               class="error-text ms-1"
-              v-if="
-                !$v.form.address.geolocation.lat.required &&
-                $v.form.address.geolocation.lat.$dirty
-              "
-            >
+              v-if="!$v.form.address.geolocation.lat.required && $v.form.address.geolocation.lat.$dirty" >
               Lat is required
             </div>
             <input
@@ -223,11 +190,7 @@
             />
             <div
               class="error-text ms-1"
-              v-if="
-                !$v.form.address.geolocation.long.required &&
-                $v.form.address.geolocation.long.$dirty
-              "
-            >
+              v-if="!$v.form.address.geolocation.long.required && $v.form.address.geolocation.long.$dirty">
               Long is required
             </div>
             <br />
@@ -236,8 +199,7 @@
               @click.prevent="registerUser"
               :disabled="$v.$invalid"
               class="btn btn-success my-3"
-              type="submit"
-            >
+              type="submit">
               Sing up
             </button>
           </form>
@@ -248,12 +210,14 @@
 </template>
 <script>
 import InputSlug from "../../components/InputSlug.vue";
+import InputNumber from "../../components/inputNumber.vue";
 
 import { inputScript } from "../../mixins/signInScripts";
 export default {
   mixins: [inputScript],
   components: {
     InputSlug,
+    InputNumber
   },
 };
 </script>
