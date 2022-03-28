@@ -1,5 +1,5 @@
 <template>
-    <input type="text" @keypress="onlyNumber">
+    <input type="text" @keypress="onlyNumber" @input="handle">
 </template>
 <script>
 export default {
@@ -9,6 +9,9 @@ export default {
       if ((keyCode < 48 || keyCode > 57) && keyCode !== 46) {
         $event.preventDefault();
       }
+    },
+    handle(e) {
+      this.$emit(Event='input', e.target.value)
     }
   },
 }

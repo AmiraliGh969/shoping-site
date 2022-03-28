@@ -10,6 +10,7 @@
                 <input-slug
                   v-model="$v.form.name.firstname.$model"
                   class="form-control mt-3"
+                  placeholder="First name"
                   :class="{
                     'error-input':
                       !$v.form.name.firstname.required &&
@@ -29,6 +30,7 @@
                 <input-slug
                   v-model="$v.form.name.lastname.$model"
                   class="form-control mt-3"
+                  placeholder="Last name"
                   :class="{
                     'error-input':
                       !$v.form.name.lastname.required &&
@@ -136,6 +138,7 @@
               id="number"
               v-model="$v.form.address.number.$model"
               class="form-control mt-3"
+              placeholder="Number"
               :class="{
                 'error-input': !$v.form.address.number.required && $v.form.address.number.$dirty,}" />
             <div class="error-text ms-1" v-if="!$v.form.address.number.numeric">
