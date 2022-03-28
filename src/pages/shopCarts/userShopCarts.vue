@@ -3,8 +3,8 @@
     <section id="cart_items">
       <div class="container">
         <div class="table-responsive cart_info">
-          <table class="table table-condensed">
-            <thead>
+          <table dir="rtl" class="table mt-5">
+            <thead class="bg-warning">
               <tr class="cart_menu">
                 <td class="image">کـالا</td>
                 <td class="description"></td>
@@ -16,28 +16,87 @@
             </thead>
             <tbody>
               <tr>
-                <td class="cart_product">
-                  <img src="https://thewilsonbeacon.com/wp-content/uploads/2019/05/silhouette.jpg" width="60" height="60" alt="" />
+                <td>
+                  <img
+                    src="https://thewilsonbeacon.com/wp-content/uploads/2019/05/silhouette.jpg"
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
                 </td>
                 <td class="cart_description">
-                  <h4>
-                    Product Name
-                  </h4>
+                  <h4>Product Name</h4>
                   <p>شناسـه : 010101</p>
                 </td>
                 <td class="cart_price">
                   <p>20000 تومان</p>
                 </td>
                 <td class="cart_quantity">
-                  <div class="cart_quantity_button">
-                    <p>1</p>
+                  <div>
+                    <p class="border w-25 text-center">1</p>
                   </div>
                 </td>
                 <td class="cart_total">
-                  <p class="cart_total_price">20000</p>
+                  <p class="text-warning">20000 ریال</p>
                 </td>
                 <td class="cart_delete">
-                  <font-awesome-icon icon="faWindowClose"/>
+                  <font-awesome-icon icon="fas fa-window-close" size="2x" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://thewilsonbeacon.com/wp-content/uploads/2019/05/silhouette.jpg"
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                </td>
+                <td class="cart_description">
+                  <h4>Product Name</h4>
+                  <p>شناسـه : 010101</p>
+                </td>
+                <td class="cart_price">
+                  <p>20000 تومان</p>
+                </td>
+                <td class="cart_quantity">
+                  <div>
+                    <p class="border w-25 text-center">1</p>
+                  </div>
+                </td>
+                <td class="cart_total">
+                  <p class="text-warning">20000 ریال</p>
+                </td>
+                <td class="cart_delete">
+                  <font-awesome-icon icon="fas fa-window-close" size="2x" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://thewilsonbeacon.com/wp-content/uploads/2019/05/silhouette.jpg"
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                </td>
+                <td class="cart_description">
+                  <h4>Product Name</h4>
+                  <p>شناسـه : 010101</p>
+                </td>
+                <td class="cart_price">
+                  <p>20000 تومان</p>
+                </td>
+                <td class="cart_quantity">
+                  <div>
+                    <p class="border w-25 text-center">1</p>
+                  </div>
+                </td>
+                <td class="cart_total">
+                  <p class="text-warning">20000 ریال</p>
+                </td>
+                <td class="cart_delete">
+                  <font-awesome-icon icon="fas fa-window-close" size="2x" />
                 </td>
               </tr>
             </tbody>
@@ -48,16 +107,15 @@
     <!--/#cart_items-->
 
     <section id="do_action">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="total_area">
-              <ul>
-                <li>
-                  مجمـوع <span>20000 تومان</span>
-                </li>
-              </ul>
-              <a class="btn btn-default check_out cursor-pointer">پرداخت</a>
+      <div class="container my-5">
+        <div dir="rtl" class="row">
+          <div class="col-md-6">
+            <div  class="border d-flex flex-column align-items-start p-4">
+              <div class="w-100 bg-secondary d-flex justify-content-between align-items-center p-2 rounded">
+                <span>مجمـوع</span>
+                <span>20000 تومان</span>
+              </div>
+              <a class="btn btn-default btn-warning w-50 mt-2">پرداخت</a>
             </div>
           </div>
         </div>
@@ -65,6 +123,7 @@
     </section>
     <!--/#do_action-->
   </div>
+
   <!-- <div class="container min-height-350">
     <div class="alert alert-warning">
       سبد خرید شما خالی میباشد
