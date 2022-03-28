@@ -6,7 +6,13 @@
           <h2><strong>Sign up new account:</strong></h2>
           <form action="#" class="d-flex flex-column">
             <div class="d-flex flex-row">
-            <FristNameInputSlug :form="$v.form" />
+              <input-slug v-model="$v.form.name.firstname.$model" class="form-control mt-3"
+                          :class="{'error-input':!$v.form.name.firstname.required && $v.form.name.lastname.$dirty}"
+              >
+                <div class="error-text ms-1" v-if="!$v.form.name.firstname.required && $v.form.name.lastname.$dirty">
+                  Lastname is required
+                </div>
+              </input-slug>
             <div class="flex-column w-50 ms-1">
               <input type="text" v-model="$v.form.name.lastname.$model"
                 :class="{'error-input':!$v.form.name.lastname.required && $v.form.name.lastname.$dirty}"
@@ -102,11 +108,13 @@
 </template>
 <script>
 import FristNameInputSlug from '../inputs/firstNameInputSlug.vue'
+import InputSlug from '@/components/InputSlug'
+
 import {inputScript} from '../../mixins/signInScripts'
 export default {
   mixins: [inputScript],
   components: {
-    FristNameInputSlug
+    FristNameInputSlug,InputSlug
   },
 };
 </script>
