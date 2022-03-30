@@ -8,16 +8,17 @@
       <p class="card-text text-secondary">{{ product.title }}</p>
       <div class="row">
         <ul class="nav nav-pills justify-content-around">
-          <router-link :to="`/products/single/${product.id}`">
-            <li>
+          <li>
+            <router-link :to="`/products/single/${product.id}`">
               <a href="/" class="add-to-cart">
                 <font-awesome-icon icon="eye"/>
                 مشاهده
               </a>
-            </li>
-          </router-link>
-            <addToCart />
-
+            </router-link>
+          </li>
+          <li>
+            <addToCart :product="product" />
+          </li>
         </ul>
       </div>
     </div>
@@ -45,11 +46,6 @@ export default {
     //   type: String
     // }
 
-  },
-  methods: {
-    AddOrIncCart(product) {
-      this.$store.dispatch("AddOrIncCart",product)
-    }
   },
   components: {
     addToCart

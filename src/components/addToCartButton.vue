@@ -1,57 +1,54 @@
 <template>
-  <!-- <div>
-    <li>
-      <a class="add-to-cart" @click="AddOrIncCart(product)">
-        <font-awesome-icon icon="shopping-cart" />
-        افزودن به سبد
-      </a>
-    </li>
-  </div> -->
-  <div>
-    <li>
-      <div class="d-flex">
-        <button class="btn btn-outline-success" @click="DecrBtn"><woefjjio</button>
-        <input
-          type="text"
-          v-model="count"
-          class="form-control fw-bold mx-2 number-input-single-page"
-        />
-        <button class="btn btn-outline-success" @click="incrBtn">></button>
-      </div>
-    </li>
+  <div v-if="!curretnItemInCart">
+    <a class="add-to-cart" @click="AddOrIncCart(product)">
+      <font-awesome-icon icon="shopping-cart" />
+      افزودن به سبد
+    </a>
+  </div>
+  <div v-else>
+    <div class="d-flex">
+      <button class="btn btn-outline-success" @click="ClearOrDecCart(product)">-</button>
+      <input
+        type="text"
+        :value="count"
+        readonly
+        class="form-control fw-bold mx-2 number-input-single-page"
+      />
+      <button class="btn btn-outline-success" @click="AddOrIncCart(product)">+</button>
+    </div>
   </div>
 </template>
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
-  data() {
-    return {
-      count: 1,
-    };
+  props: {
+    product: {
+      type: Object,
+      required: true
+    },
   },
-  // props: {
-  //   product: {
-  //     type: Object,
-  //     default: () => ({}),
-  //   },
-  // },
   methods: {
-    ...mapActions(["GetSingleProductFromServer"]),
-    AddToCart(product) {
-      this.$store.dispatch("AddToCart", { product, count: this.count });
-    },
-    incrBtn() {
-      this.count++;
-    },
-    DecrBtn() {
-      this.count--;
-    },
-    AddOrIncCart(product) {
-      this.$store.dispatch("AddOrIncCart", product);
-    },
+    ...mapActions(["AddOrIncCart", "ClearOrDecCart"]),
+    // AddToCart(product) {
+    //   this.$store.dispatch("AddToCart", { product, count: this.count });
+    // },
+    // AddOrIncCart(product) {
+    //   this.$store.dispatch("AddOrIncCart", product);
+    //   this.count++;
+    // },
+    // ClearOrDecCart(product) {
+    //   this.$store.dispatch("ClearOrDecCart", product);
+    //   this.count--;
+    // }
   },
   computed: {
-    ...mapGetters({ product: "GetSingleProduct" }),
+    ...mapState(['cart']),
+    curretnItemInCart() {
+      return this.cart.items[this.product.id] || null
+    },
+    count() {
+      return this.curretnItemInCart ? this.curretnItemInCart.count : 0
+    }
   },
 };
 </script>

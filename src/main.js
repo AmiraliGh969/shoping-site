@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import BootstrapVue from "bootstrap-vue";
 import Vuelidate from 'vuelidate'
 import VueCookie from 'vue-cookie'
+import Price from '@/components/Price'
 
 
 library.add(
@@ -25,6 +26,7 @@ library.add(
 Vue.config.productionTip = false
 
 Vue.component('FontAwesomeIcon', FontAwesomeIcon)
+Vue.component('price', Price)
 Vue.use(BootstrapVue);
 Vue.use(Vuelidate);
 Vue.use(VueCookie);

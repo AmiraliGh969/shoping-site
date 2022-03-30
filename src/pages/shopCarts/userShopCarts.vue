@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="allItems.length">
     <section id="cart_items">
       <div class="container">
         <div class="table-responsive cart_info">
@@ -28,15 +28,14 @@
                   <p>{{ cart.product.title }}</p>
                 </td>
                 <td class="cart_price">
-                  <p>{{ cart.price }} تومان</p>
+                  <price :value="cart.price"/>
                 </td>
                 <td class="cart_quantity">
-                  <div>
-                    <p class="border w-25 text-center">{{ cart.count }}</p>
-                  </div>
+                  <addToCart :product="cart.product" />
                 </td>
                 <td class="cart_total">
-                  <p class="text-warning">{{cart.count * cart.price}} تومان</p>
+                  <p class="text-warning"></p>
+                  <price :value="cart.price * cart.count"/>
                 </td>
                 <td class="cart_delete">
                   <font-awesome-icon icon="fas fa-window-close" size="2x" />
@@ -56,7 +55,7 @@
             <div  class="border d-flex flex-column align-items-start p-4">
               <div class="w-100 bg-secondary d-flex justify-content-between align-items-center p-2 rounded">
                 <span>مجمـوع</span>
-                <span>20000 تومان</span>
+                <price :value="cartTotal"/>
               </div>
               <a class="btn btn-default btn-warning w-50 mt-2">پرداخت</a>
             </div>
@@ -65,18 +64,21 @@
       </div>
     </section>
   </div>
-  <!-- <div class="container min-height-350">
+  <div v-else class="container min-height-350 mt-2">
     <div class="alert alert-warning">
       سبد خرید شما خالی میباشد
     </div>
-  </div>  -->
+  </div> 
 </template>
 <script>
+import addToCart from '@/components/addToCartButton.vue'
 import {mapGetters} from 'vuex'
 export default {
+  components: {
+    addToCart
+  },
   computed: {
-    ...mapGetters(["allItems"])
-    
+    ...mapGetters(["allItems", "cartTotal"])
   }
 }
 </script>
