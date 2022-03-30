@@ -10,7 +10,7 @@
   <div>
     <li>
       <div class="d-flex">
-        <button class="btn btn-outline-success" @click="DecrBtn"><</button>
+        <button class="btn btn-outline-success" @click="DecrBtn"><woefjjio</button>
         <input
           type="text"
           v-model="count"
