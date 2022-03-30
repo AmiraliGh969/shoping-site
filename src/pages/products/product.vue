@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <div class="row my-5">
-    <div class="col-md-3 mt-3" v-for="MoreProduct in FillterMoreProduct" :key="MoreProduct.MoreProductID">
+    <div class="col-md-3 mt-3" v-for="product in FillterMoreProduct" :key="product.MoreProductID">
       <!-- <div class="card text-center p-2" >
         <router-link :to="`/products/single/${MoreProduct.id}`">
           <img :src="MoreProduct.image" class="card-img-top">
@@ -29,9 +29,9 @@
           </div>
         </div>
       </div> -->
-      <boxProduct :id="MoreProduct.id" :image="MoreProduct.image" :title="MoreProduct.title" :price="MoreProduct.price" />
+      <boxProduct :product="product" />
     </div>
-    <div class="col-md-3 mt-3" v-for="MoreProduct in FillterMoreProduct" :key="MoreProduct.MoreProductID">
+    <div class="col-md-3 mt-3" v-for="product in FillterMoreProduct" :key="product.MoreProductID">
       <!-- <div class="card text-center p-2" >
         <router-link :to="`/products/single/${MoreProduct.id}`">
           <img :src="MoreProduct.image" class="card-img-top">
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div> -->
-      <boxProduct :id="MoreProduct.id" :image="MoreProduct.image" :title="MoreProduct.title" :price="MoreProduct.price" />
+      <boxProduct :product="product" />
 
     </div>
     <div class="row mt-2">

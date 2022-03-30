@@ -30,7 +30,7 @@
           </div>
         </div>
       </div> -->
-      <boxProduct :id="product.id" :image="product.image" :title="product.title" :price="product.price" />
+      <boxProduct :product="product" />
     </div>
   </div>
 </template>

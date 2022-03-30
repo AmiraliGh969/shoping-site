@@ -182,7 +182,8 @@ input:focus {
   object-fit: contain;
 }
 .number-input-single-page {
-  width: 11%;
+  text-align: center;
+  width: 50px;
 }
 .login-form {
   margin: 70px 0px;

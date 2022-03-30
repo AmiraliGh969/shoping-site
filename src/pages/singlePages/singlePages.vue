@@ -3,22 +3,23 @@
       <div class="container my-5">
         <div class="row">
           <div class="col-md-6 py-3">
-            <h5><strong>product Number {{SingleProduct.id}}</strong></h5>
+            <h5><strong>product Number {{product.id}}</strong></h5>
             <p class="text-secondary"><strong>ID: 010001341</strong></p>
             <br>
-            <h4 class="text-warning"><strong>price: {{SingleProduct.price}}$</strong></h4>
+            <h4 class="text-warning"><strong>price: {{product.price}}$</strong></h4>
             <br>
-            <div class="d-flex ">
-              <p><strong>Number:</strong></p>
-              <input type="number" value="0" class="form-control fw-bold ms-2 number-input-single-page">
-              <a href="#" class="btn btn-outline-warning ms-5">
+            <div class="d-flex ">           
+              <button class="btn btn-outline-success" @click="DecrBtn"> < </button>
+              <input type="text" v-model="count" class="form-control fw-bold mx-2 number-input-single-page">
+              <button class="btn btn-outline-success" @click="incrBtn"> > </button>
+              <a class="btn btn-outline-warning ms-5" @click="AddToCart(product)">
                 <font-awesome-icon icon="shopping-cart"/>
                 Add to your card</a>
             </div>
-            <p class="text-secondary mt-4">{{SingleProduct.description}}</p>
+            <p class="text-secondary mt-4">{{product.description}}</p>
           </div>
           <div class="col-md-6 d-flex justify-content-center">
-            <img :src="SingleProduct.image" class="image-for-single-page">
+            <img :src="product.image" class="image-for-single-page">
           </div>
         </div>
       </div>
@@ -30,11 +31,25 @@
 import { mapGetters, mapActions } from "vuex";
 import SuggestedProduct from "./components/suggestedProduct.vue";
 export default {
+  data() {
+    return {
+      count:1
+    }
+  },
   computed: {
-    ...mapGetters({ SingleProduct: "GetSingleProduct" }),
+    ...mapGetters({ product: "GetSingleProduct" }),
   },
   methods: {
     ...mapActions(["GetSingleProductFromServer"]),
+    AddToCart(product) {
+      this.$store.dispatch("AddToCart", { product, count: this.count })
+    },
+    incrBtn() {
+      this.count ++
+    },
+    DecrBtn() {
+      this.count --
+    }
   },
   created() {
     this.GetSingleProductFromServer({

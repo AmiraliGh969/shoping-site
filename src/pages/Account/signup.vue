@@ -18,7 +18,7 @@
                 </input-slug>
                 <div class="error-text ms-1"
                   v-if="!$v.form.name.firstname.required && $v.form.name.firstname.$dirty">
-                  Firstname is required
+                  First name is required
                 </div>
                 <div
                   class="error-text ms-1"

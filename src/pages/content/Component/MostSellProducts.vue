@@ -29,7 +29,7 @@
             </ul>
           </div>
         </div> -->
-      <boxProduct :id="product.id" :image="product.image" :title="product.title" :price="product.price" />
+      <boxProduct :product="product" />
       </div>
     </div>
   </div>
@@ -50,5 +50,6 @@ export default {
       this.$store.dispatch("GetMostSellProductsFromServer");
     }
   },
+
 };
 </script>

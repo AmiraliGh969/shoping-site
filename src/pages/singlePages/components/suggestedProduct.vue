@@ -20,7 +20,7 @@
                 </li>
               </router-link>
               <li>
-                <a href="/" class="add-to-cart">
+                <a class="add-to-cart" @click="AddOrIncCart(product)">
                   <font-awesome-icon icon="shopping-cart"/>
                   افزودن به سبد
                 </a>
@@ -34,6 +34,11 @@
 </template>
 <script>
 export default {
+  methods: {
+    AddOrIncCart(product) {
+      this.$store.dispatch("AddOrIncCart",product)
+    }
+  },
   computed: {
     suggestedProducts() {
       return this.$store.getters.GetSuggestedProduct;

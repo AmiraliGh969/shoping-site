@@ -24,65 +24,9 @@
                     alt=""
                   />
                 </td>
-                <td class="cart_description">
-                  <h4>Product Name</h4>
-                  <p>شناسـه : 010101</p>
-                </td>
-                <td class="cart_price">
-                  <p>20000 تومان</p>
-                </td>
-                <td class="cart_quantity">
-                  <div>
-                    <p class="border w-25 text-center">1</p>
-                  </div>
-                </td>
-                <td class="cart_total">
-                  <p class="text-warning">20000 ریال</p>
-                </td>
-                <td class="cart_delete">
-                  <font-awesome-icon icon="fas fa-window-close" size="2x" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://thewilsonbeacon.com/wp-content/uploads/2019/05/silhouette.jpg"
-                    width="60"
-                    height="60"
-                    alt=""
-                  />
-                </td>
-                <td class="cart_description">
-                  <h4>Product Name</h4>
-                  <p>شناسـه : 010101</p>
-                </td>
-                <td class="cart_price">
-                  <p>20000 تومان</p>
-                </td>
-                <td class="cart_quantity">
-                  <div>
-                    <p class="border w-25 text-center">1</p>
-                  </div>
-                </td>
-                <td class="cart_total">
-                  <p class="text-warning">20000 ریال</p>
-                </td>
-                <td class="cart_delete">
-                  <font-awesome-icon icon="fas fa-window-close" size="2x" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://thewilsonbeacon.com/wp-content/uploads/2019/05/silhouette.jpg"
-                    width="60"
-                    height="60"
-                    alt=""
-                  />
-                </td>
-                <td class="cart_description">
-                  <h4>Product Name</h4>
-                  <p>شناسـه : 010101</p>
+                <td class="cart_description" v-for="item in AllItem" :key="item.product.id">
+                  <h4></h4>
+                  <p>{{ cart.product.title }}</p>
                 </td>
                 <td class="cart_price">
                   <p>20000 تومان</p>
@@ -121,12 +65,14 @@
         </div>
       </div>
     </section>
-    <!--/#do_action-->
   </div>
-
   <!-- <div class="container min-height-350">
     <div class="alert alert-warning">
       سبد خرید شما خالی میباشد
     </div>
-  </div> -->
+  </div>  -->
 </template>
+<script>
+export default {
+}
+</script>
