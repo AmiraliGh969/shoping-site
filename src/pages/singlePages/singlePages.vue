@@ -31,11 +31,11 @@
 import { mapGetters, mapActions } from "vuex";
 import SuggestedProduct from "./components/suggestedProduct.vue";
 export default {
-  data() {
-    return {
-      count:1
-    }
-  },
+    data() {
+      return {
+        count:1
+      }
+    },
   computed: {
     ...mapGetters({ product: "GetSingleProduct" }),
   },

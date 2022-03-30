@@ -7,16 +7,12 @@ const state = {
     //   count: 1,
     //   price: 55
     // },
-    // [product2Id]: {
-    //   product: {...},
-    //   count: 1,
-    //   price: 55
-    // }
   },
 }
 
 const getters = {
   allItems(state) {
+    console.log('tttttt', Object.values(state.items));
     return Object.values(state.items);
   },
   cartTotal(state) {
@@ -37,6 +33,8 @@ const mutations = {
         price: product.price
       }
     }
+    state.items = {...state.items}
+    state = {...state}
   },
   DecCart(state, product) {
     const productId = product.id
@@ -48,6 +46,8 @@ const mutations = {
         state.items[productId] = { ...state.items[productId] }
       }
     }
+    state.items = {...state.items}
+    state = {...state}
   },
   setCartCount(state, {product, count = 1}) {
     const productId = product.id
@@ -56,21 +56,22 @@ const mutations = {
       count,
       price: product.price
     }
-
+    state.items = {...state.items}
+    state = {...state}
   },
 
 };
 
 const actions = {
   AddOrIncCart(context, product) {
-    context.commit("IncCart", product)
+    context.commit("IncCart", {...product})
     console.log("hello");
   },
   ClearOrDecCart(context, product) {
-    context.commit("DecCart", product)
+    context.commit("DecCart", {...product})
   },
   AddToCart(context, {product, count}) {
-    context.commit("setCartCount", {product, count})
+    context.commit("setCartCount", {product: {...product}, count})
     console.log("how are you", count);
   },
 };

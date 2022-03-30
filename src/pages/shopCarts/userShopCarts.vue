@@ -15,29 +15,28 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr v-for="cart in allItems" :key="cart.product.id">
                 <td>
                   <img
-                    src="https://thewilsonbeacon.com/wp-content/uploads/2019/05/silhouette.jpg"
+                    :src="cart.product.image"
                     width="60"
                     height="60"
                     alt=""
                   />
                 </td>
-                <td class="cart_description" v-for="item in AllItem" :key="item.product.id">
-                  <h4></h4>
+                <td class="cart_description">
                   <p>{{ cart.product.title }}</p>
                 </td>
                 <td class="cart_price">
-                  <p>20000 تومان</p>
+                  <p>{{ cart.price }} تومان</p>
                 </td>
                 <td class="cart_quantity">
                   <div>
-                    <p class="border w-25 text-center">1</p>
+                    <p class="border w-25 text-center">{{ cart.count }}</p>
                   </div>
                 </td>
                 <td class="cart_total">
-                  <p class="text-warning">20000 ریال</p>
+                  <p class="text-warning">{{cart.count * cart.price}} تومان</p>
                 </td>
                 <td class="cart_delete">
                   <font-awesome-icon icon="fas fa-window-close" size="2x" />
@@ -73,6 +72,11 @@
   </div>  -->
 </template>
 <script>
+import {mapGetters} from 'vuex'
 export default {
+  computed: {
+    ...mapGetters(["allItems"])
+    
+  }
 }
 </script>

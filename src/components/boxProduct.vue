@@ -16,18 +16,15 @@
               </a>
             </li>
           </router-link>
-          <li>
-            <a class="add-to-cart" @click="AddOrIncCart(product)">
-              <font-awesome-icon icon="shopping-cart"/>
-              افزودن به سبد
-            </a>
-          </li>
+            <addToCart />
+
         </ul>
       </div>
     </div>
   </div>
 </template>
 <script>
+import addToCart from './addToCartButton.vue'
 export default {
   name: "boxProduct",
   props: {
@@ -54,5 +51,8 @@ export default {
       this.$store.dispatch("AddOrIncCart",product)
     }
   },
+  components: {
+    addToCart
+  }
 }
 </script>
