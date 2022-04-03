@@ -37,7 +37,7 @@
                   <p class="text-warning"></p>
                   <price :value="cart.price * cart.count"/>
                 </td>
-                <td class="cart_delete">
+                <td class="cart_delete" @click="AddToCart({ count: 0, product:cart.product})">
                   <font-awesome-icon icon="fas fa-window-close" size="2x" />
                 </td>
               </tr>
@@ -72,13 +72,16 @@
 </template>
 <script>
 import addToCart from '@/components/addToCartButton.vue'
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 export default {
   components: {
     addToCart
   },
   computed: {
     ...mapGetters(["allItems", "cartTotal"])
-  }
+  },
+  methods: {
+    ...mapActions(["AddToCart"])
+  },
 }
 </script>

@@ -1,6 +1,7 @@
 
 a {
   text-decoration: none !important;
+  cursor: pointer;
 }
 input:focus {
   box-shadow: none !important;

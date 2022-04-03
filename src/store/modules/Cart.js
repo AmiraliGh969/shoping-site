@@ -12,7 +12,6 @@ const state = {
 
 const getters = {
   allItems(state) {
-    console.log('tttttt', Object.values(state.items));
     return Object.values(state.items);
   },
   cartTotal(state) {
@@ -56,6 +55,11 @@ const mutations = {
       count,
       price: product.price
     }
+    if (state.items[productId].count <= 0) {
+      delete state.items[productId]
+    } else {
+      state.items[productId] = { ...state.items[productId] }
+    }
     state.items = {...state.items}
     state = {...state}
   },
@@ -65,14 +69,12 @@ const mutations = {
 const actions = {
   AddOrIncCart(context, product) {
     context.commit("IncCart", {...product})
-    console.log("hello");
   },
   ClearOrDecCart(context, product) {
     context.commit("DecCart", {...product})
   },
   AddToCart(context, {product, count}) {
     context.commit("setCartCount", {product: {...product}, count})
-    console.log("how are you", count);
   },
 };
 
