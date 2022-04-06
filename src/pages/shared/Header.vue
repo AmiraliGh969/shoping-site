@@ -38,6 +38,9 @@
             <li class="link">
               <router-link to="/shopCart">سبد خرید</router-link>
             </li>
+            <li class="link">
+              <router-link to="/dashboard"> dashboard</router-link>
+            </li>
         </ul>
       </div>
       <br><br>

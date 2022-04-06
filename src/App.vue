@@ -1,21 +1,33 @@
 <template>
   <div id="app">
-    <Header/>
-      <router-view class="animate__animated animate__fadeIn">
-      </router-view>
-    <Footer/>
+    <component :is="layout.header" />
+    <router-view class="animate__animated animate__fadeIn"> </router-view>
+    <component :is="layout.footer"/>
   </div>
 </template>
 
 <script>
 import "animate.css";
-import Header from "./pages/shared/Header";
-import Footer from "./pages/shared/Footer";
+import appHeader from "./pages/shared/Header";
+import appFooter from "./pages/shared/Footer";
+import dashboardHeader from "./pages/shared/DashHeader";
+import dashboardFooter from "./pages/shared/DashFooter";
 export default {
   name: "App",
   components: {
-    Header,
-    Footer,
+    appHeader,
+    appFooter,
+    dashboardHeader,
+    dashboardFooter,
+  },
+  computed: {
+    layout() {
+      let isDashboard = this.$route.path.startsWith("/dashboard");
+      return {
+        header: isDashboard ? "dashboardHeader" : "appHeader",
+        footer: isDashboard ? "dashboardFooter" : "appFooter",
+      };
+    },
   },
 };
 </script>

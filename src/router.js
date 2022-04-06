@@ -7,6 +7,7 @@ import SingleProduct from './pages/singlePages/singlePages.vue'
 import logIn from './pages/Account/LogIn.vue'
 import signup from './pages/Account/signup.vue'
 import shopCart from './pages/shopCarts/userShopCarts.vue'
+import dashboard from './pages/Dashboard/main-page.vue'
 Vue.use(Router)
 let routes = new Router(
   {
@@ -17,7 +18,7 @@ let routes = new Router(
         y: 0
       }
     },
-    base: '/app',
+    // base: '/app',
     routes: [
       {
         path: "/",
@@ -47,6 +48,10 @@ let routes = new Router(
       {
         path: "/shopCart",
         component: shopCart
+      },
+      {
+        path: "/dashboard",
+        component: dashboard
       }
     ]
    }
