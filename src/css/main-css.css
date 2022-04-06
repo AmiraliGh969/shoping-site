@@ -1,7 +1,76 @@
-
+body {
+  background-color: #16273c;
+}
 a {
   text-decoration: none !important;
   cursor: pointer;
+}
+.search-input-parent {
+  width: 500px;
+  border-radius: 25px;
+  background: rgba(211, 211, 211, 0.179);
+  transition: all .3s;
+}
+.b-sidebar {
+  background-color: #2b3542 !important;
+}
+#sidebar-right___title__ {
+  color: rgba(211, 211, 211, 0.514);
+}
+.close {
+  border: none;
+  border-radius:5px;
+  background-image: linear-gradient(to bottom right, #8929ad, #436aac, #43b7b8);
+}
+.close .bi-x {
+  color: white;
+}
+.search-input {
+  background-color: transparent;
+  border: none;
+}
+.search-input:focus {
+  color: white;
+  background-color:transparent ;
+}
+.btn-background {
+  background-image: linear-gradient(to bottom right, #8929ad, #436aac, #43b7b8);
+}
+.icon-area {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: rgba(211, 211, 211, 0.179);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+  color: gray;
+}
+.li-for-dashboard-items {
+  transition:all .2s;
+}
+.li-for-dashboard-items:hover {
+  border-left:3px solid  #8929ad;
+}
+.li-for-dashboard-items:hover .icon-area{
+  background-image: linear-gradient(to bottom right, #8929ad, #436aac, #43b7b8);
+  color: white;
+}
+
+.li-for-dashboard-items:hover .li-text{
+  color: white !important;
+}
+.li-text {
+  transition: .2s;
+}
+
+li {
+  list-style-type: none;
+}
+ul {
+  margin: 0% !important;
+  padding: 0% !important;
 }
 input:focus {
   box-shadow: none !important;

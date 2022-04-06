@@ -12,7 +12,9 @@
                 i'm not robot
               </label>
             </div>
-            <button type="submit" class="btn btn-warning my-3 w-25"><strong>LogIn</strong></button>
+            <button type="submit" class="btn btn-warning my-3 w-25">
+              <router-link to="/dashboard"><strong class="text-dark">LogIn</strong></router-link>
+            </button>
           </form>
         </div>
 			</div>
