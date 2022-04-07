@@ -19,24 +19,30 @@
         </b-button>
         <b-sidebar id="sidebar-right" title="Tibolite Dashboard" right shadow body-class="flex-grow-1 px-3 py-2 mt-4 d-flex flex-column justify-content-between">
           <ul>
-            <li class="d-flex justify-content-end align-items-center li-for-dashboard-items">
-              <p class="li-text p-0 m-0 me-3 text-secondary">Home</p>
-              <div class="icon-area">
-                <font-awesome-icon icon="home" />
-              </div>
-            </li>
-            <li class="d-flex justify-content-end align-items-center li-for-dashboard-items mt-3">
-              <p class="li-text p-0 m-0 me-3 text-secondary">Dashboard</p>
-              <div class="icon-area">
-                <font-awesome-icon icon="cog" />
-              </div>
-            </li>
-            <li class="d-flex justify-content-end align-items-center li-for-dashboard-items mt-3">
-              <p class="li-text p-0 m-0 me-3 text-secondary">market</p>
-              <div class="icon-area">
-                <font-awesome-icon icon="shopping-cart" />
-              </div>
-            </li>
+            <router-link to="/">              
+              <li class="d-flex justify-content-end align-items-center li-for-dashboard-items">
+                <p class="li-text p-0 m-0 me-3 text-secondary">Home</p>
+                <div class="icon-area">
+                  <font-awesome-icon icon="home" />
+                </div>
+              </li>
+            </router-link>
+            <router-link to="/dashboard"> 
+              <li class="d-flex justify-content-end align-items-center mt-3 li-for-dashboard-items">
+                <p class="li-text p-0 m-0 me-3 text-secondary">Dashboard</p>
+                <div class="icon-area">
+                  <font-awesome-icon icon="cog" />
+                </div>
+              </li>
+            </router-link>
+            <router-link to="/products/women's clothing">            
+              <li class="d-flex justify-content-end align-items-center li-for-dashboard-items mt-3">
+                <p class="li-text p-0 m-0 me-3 text-secondary">market</p>
+                <div class="icon-area">
+                  <font-awesome-icon icon="shopping-cart" />
+                </div>
+              </li>
+            </router-link>
             <li class="d-flex justify-content-end align-items-center li-for-dashboard-items mt-3">
               <p class="li-text p-0 m-0 me-3 text-secondary">Collection</p>
               <div class="icon-area">
@@ -44,13 +50,15 @@
               </div>
             </li>
           </ul>
-          <ul>              
-            <li class="d-flex justify-content-end align-items-center li-for-dashboard-items">
-              <p class="li-text p-0 m-0 me-3 text-secondary">Log out</p>
-              <div class="icon-area">
-                <font-awesome-icon icon="door-open" />
-              </div>
-            </li>
+          <ul>       
+            <router-link to="/logIn">            
+              <li class="d-flex justify-content-end align-items-center li-for-dashboard-items">
+                <p class="li-text p-0 m-0 me-3 text-secondary">Log out</p>
+                <div class="icon-area">
+                  <font-awesome-icon icon="door-open" />
+                </div>
+              </li>
+            </router-link>       
           </ul>
         </b-sidebar>
       </div>

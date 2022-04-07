@@ -49,9 +49,11 @@ a {
 }
 .li-for-dashboard-items {
   transition:all .2s;
+  cursor: pointer;
 }
 .li-for-dashboard-items:hover {
   border-left:3px solid  #8929ad;
+  border-radius: 4px 0px 0px 4px;
 }
 .li-for-dashboard-items:hover .icon-area{
   background-image: linear-gradient(to bottom right, #8929ad, #436aac, #43b7b8);
@@ -64,7 +66,10 @@ a {
 .li-text {
   transition: .2s;
 }
-
+.content-box-area {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
 li {
   list-style-type: none;
 }
