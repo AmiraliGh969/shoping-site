@@ -2,65 +2,65 @@
   <div>
     <nav class="navbar navbar-expand-lg mt-1">
       <div class="container-fluid">
-        <a class="navbar-brand text-light" href="#"><strong>Tibolite</strong></a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="d-flex search-input-parent ms-5">
-            <input
-              class="form-control search-input me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <font-awesome-icon icon="search" class="fa-flip-horizontal text-secondary mt-2 me-3" />
-          </form>
-        </div>
-        <b-button v-b-toggle.sidebar-right class="btn-background">
+        <b-button v-b-toggle.sidebar-left class="btn-background">
           <font-awesome-icon icon="list" />
         </b-button>
-        <b-sidebar id="sidebar-right" title="Tibolite Dashboard" right shadow body-class="flex-grow-1 px-3 py-2 mt-4 d-flex flex-column justify-content-between">
-          <ul>
-            <router-link to="/">              
-              <li class="d-flex justify-content-end align-items-center li-for-dashboard-items">
-                <p class="li-text p-0 m-0 me-3 text-secondary">Home</p>
-                <div class="icon-area">
-                  <font-awesome-icon icon="home" />
-                </div>
-              </li>
-            </router-link>
-            <router-link to="/dashboard"> 
-              <li class="d-flex justify-content-end align-items-center mt-3 li-for-dashboard-items">
-                <p class="li-text p-0 m-0 me-3 text-secondary">Dashboard</p>
-                <div class="icon-area">
-                  <font-awesome-icon icon="cog" />
-                </div>
-              </li>
-            </router-link>
-            <router-link to="/products/women's clothing">            
-              <li class="d-flex justify-content-end align-items-center li-for-dashboard-items mt-3">
-                <p class="li-text p-0 m-0 me-3 text-secondary">market</p>
-                <div class="icon-area">
-                  <font-awesome-icon icon="shopping-cart" />
-                </div>
-              </li>
-            </router-link>
-            <li class="d-flex justify-content-end align-items-center li-for-dashboard-items mt-3">
-              <p class="li-text p-0 m-0 me-3 text-secondary">Collection</p>
+        <b-sidebar id="sidebar-left" title="Tibolite Dashboard" left shadow body-class="flex-grow-1  py-2 mt-4 d-flex flex-column justify-content-between">
+          <ul class="mx-3">
+            <label class="text-secondary fs-5 " for="user">User</label>
+            <li id="user" class="d-flex justify-content-start align-items-center mt-1 li-for-dashboard-items">
               <div class="icon-area">
-                <font-awesome-icon icon="folder-open" />
+                <font-awesome-icon icon="user" />
               </div>
+              <router-link to="/dashboard/allUsers">
+                <p class="li-text p-0 m-0 ms-3 text-secondary">All Users</p> 
+              </router-link>
+            </li>
+            <label class="text-secondary fs-5 mt-4" for="all-product">products</label>
+            <li id="all-product" class="d-flex justify-content-start align-items-center mt-1 li-for-dashboard-items">
+              <div class="icon-area">
+                <font-awesome-icon icon="box-open" />
+              </div>
+              <p class="li-text p-0 m-0 ms-3 text-secondary">All Product</p> 
+            </li>
+            <li id="all-product" class="d-flex justify-content-start align-items-center mt-2 li-for-dashboard-items">
+              <div class="icon-area">
+                <font-awesome-icon icon="tshirt" />
+              </div>
+              <p class="li-text p-0 m-0 ms-3 text-secondary">Shirts & Pants</p> 
+            </li>
+            <li id="all-product" class="d-flex justify-content-start align-items-center mt-2 li-for-dashboard-items">
+              <div class="icon-area">
+                <font-awesome-icon icon="shoe-prints" />
+              </div>
+              <p class="li-text p-0 m-0 ms-3 text-secondary">Shoes</p> 
+            </li>
+            <li id="all-product" class="d-flex justify-content-start align-items-center mt-2 li-for-dashboard-items">
+              <div class="icon-area">
+                <font-awesome-icon icon="gem" />
+              </div>
+              <p class="li-text p-0 m-0 ms-3 text-secondary">Accessories</p> 
+            </li>
+            <label class="text-secondary fs-5 mt-4 " for="user">Sell</label>
+            <li id="user" class="d-flex justify-content-start align-items-center mt-1 li-for-dashboard-items">
+              <div class="icon-area">
+                <font-awesome-icon icon="dollar-sign" />
+              </div>
+              <p class="li-text p-0 m-0 ms-3 text-secondary">All Sells</p> 
             </li>
           </ul>
-          <ul>       
-            <router-link to="/logIn">            
-              <li class="d-flex justify-content-end align-items-center li-for-dashboard-items">
-                <p class="li-text p-0 m-0 me-3 text-secondary">Log out</p>
-                <div class="icon-area">
-                  <font-awesome-icon icon="door-open" />
-                </div>
-              </li>
-            </router-link>       
+          <ul class="mx-3">
+            <li id="all-product" class="d-flex justify-content-start align-items-center mt-2 li-for-dashboard-items">
+              <div class="icon-area">
+                <font-awesome-icon icon="door-open" />
+              </div>
+              <router-link to="/logIn">
+               <p class="li-text p-0 m-0 ms-3 text-secondary">Log out</p> 
+              </router-link>
+            </li>
           </ul>
         </b-sidebar>
+        <strong class="navbar-brand text-light">Tibolite Dashboard</strong>
       </div>
     </nav>
   </div>

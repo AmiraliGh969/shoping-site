@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <component :is="layout.header" />
-    <router-view class="animate__animated animate__fadeIn"> </router-view>
+    <router-view class="nimate__animated animate__fadeIna"> </router-view>
     <component :is="layout.footer"/>
   </div>
 </template>

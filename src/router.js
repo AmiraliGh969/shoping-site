@@ -8,6 +8,8 @@ import logIn from './pages/Account/LogIn.vue'
 import signup from './pages/Account/signup.vue'
 import shopCart from './pages/shopCarts/userShopCarts.vue'
 import dashboard from './pages/Dashboard/main-page.vue'
+import allUsers from './components/allUsers.vue'
+import userInformation from './components/singleUserInformation.vue'
 Vue.use(Router)
 let routes = new Router(
   {
@@ -51,7 +53,17 @@ let routes = new Router(
       },
       {
         path: "/dashboard",
-        component: dashboard
+        component: dashboard,
+        children: [
+          {
+            path: "/dashboard/allUsers",
+            component: allUsers
+          },
+          {
+            path: "/dashboard/userInformation",
+            component: userInformation
+          }
+        ]
       }
     ]
    }

@@ -5,17 +5,33 @@ a {
   text-decoration: none !important;
   cursor: pointer;
 }
+p {
+  padding: 0%;
+  margin: 0%;
+}
+.scrole-height {
+  height: 80vh;
+  overflow: hidden;
+}
+.all-user-parent::-webkit-scrollbar {
+  display: none;
+}
+.button-scrole-shadow {        
+  box-shadow: 
+  inset 0px -11px 8px -10px rgba(0, 0, 0, 0.500); 
+}
 .search-input-parent {
-  width: 500px;
+  margin: auto;
   border-radius: 25px;
-  background: rgba(211, 211, 211, 0.179);
+  background: rgba(22, 0, 56, 0.21);
   transition: all .3s;
 }
 .b-sidebar {
   background-color: #2b3542 !important;
 }
-#sidebar-right___title__ {
+#sidebar-left___title__ {
   color: rgba(211, 211, 211, 0.514);
+  /* color: white !important; */
 }
 .close {
   border: none;
@@ -52,8 +68,8 @@ a {
   cursor: pointer;
 }
 .li-for-dashboard-items:hover {
-  border-left:3px solid  #8929ad;
-  border-radius: 4px 0px 0px 4px;
+  border-right:3px solid  #8929ad;
+  border-radius: 0px 4px 4px 0px;
 }
 .li-for-dashboard-items:hover .icon-area{
   background-image: linear-gradient(to bottom right, #8929ad, #436aac, #43b7b8);
@@ -69,6 +85,9 @@ a {
 .content-box-area {
   background-color: rgba(255, 255, 255, 0.12);
   border-radius: 10px;
+}
+.low-opacity-background {
+  background: rgba(22, 0, 56, 0.095);
 }
 li {
   list-style-type: none;
