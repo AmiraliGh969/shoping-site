@@ -1,10 +1,6 @@
 <template>
   <div class="container mt-5">
-    <div class="row">
-      <div>
-        <component :is="layout.content" class="animate__animated animate__fadeIn"></component>
-      </div>
-    </div>
+    <component :is="layout.content" class="animate__animated animate__fadeIn"></component>
   </div>
 </template>
 <script>

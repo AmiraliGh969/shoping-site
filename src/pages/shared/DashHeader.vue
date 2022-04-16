@@ -21,19 +21,25 @@
               <div class="icon-area">
                 <font-awesome-icon icon="box-open" />
               </div>
-              <p class="li-text p-0 m-0 ms-3 text-secondary">All Product</p> 
+              <router-link to="/dashboard/allProduct">
+                <p class="li-text p-0 m-0 ms-3 text-secondary">All Product</p> 
+              </router-link>
             </li>
             <li id="all-product" class="d-flex justify-content-start align-items-center mt-2 li-for-dashboard-items">
               <div class="icon-area">
                 <font-awesome-icon icon="tshirt" />
               </div>
-              <p class="li-text p-0 m-0 ms-3 text-secondary">Shirts & Pants</p> 
+              <router-link to="/dashboard/shirtPageDashboard">
+                <p class="li-text p-0 m-0 ms-3 text-secondary">Shirts & Pants</p> 
+              </router-link>
             </li>
             <li id="all-product" class="d-flex justify-content-start align-items-center mt-2 li-for-dashboard-items">
               <div class="icon-area">
                 <font-awesome-icon icon="shoe-prints" />
               </div>
-              <p class="li-text p-0 m-0 ms-3 text-secondary">Shoes</p> 
+              <router-link to="/dashboard/shoesPageDashboard">
+                <p class="li-text p-0 m-0 ms-3 text-secondary">Shoes</p> 
+              </router-link>
             </li>
             <li id="all-product" class="d-flex justify-content-start align-items-center mt-2 li-for-dashboard-items">
               <div class="icon-area">

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-100 overflow-auto all-user-parent">
+  <div class="h-100 overflow-auto scroll-hidden">
     <div class="row  w-100">
       <div class="col-md-6">
         <ul v-for="item in 10" :key="item">

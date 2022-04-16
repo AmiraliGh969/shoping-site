@@ -13,7 +13,7 @@ p {
   height: 80vh;
   overflow: hidden;
 }
-.all-user-parent::-webkit-scrollbar {
+.scroll-hidden::-webkit-scrollbar {
   display: none;
 }
 .button-scrole-shadow {        
@@ -34,12 +34,22 @@ p {
   /* color: white !important; */
 }
 .close {
+  color: #fff;
   border: none;
+  padding: 3px 10px;
+  font-weight: bold;
+  font-size: 20px;
   border-radius:5px;
   background-image: linear-gradient(to bottom right, #8929ad, #436aac, #43b7b8);
 }
 .close .bi-x {
   color: white;
+}
+#modal-center___BV_modal_footer_ .btn-primary {
+  display: none !important;
+}
+#modal-center___BV_modal_footer_ .btn-secondary {
+  display: none !important;
 }
 .search-input {
   background-color: transparent;
@@ -83,8 +93,21 @@ p {
   transition: .2s;
 }
 .content-box-area {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: #ffffff1f;
   border-radius: 10px;
+}
+#modal-center___BV_modal_content_ {
+  background: #16273c;
+  
+}
+#modal-center___BV_modal_content_ h5 {
+  color: #fff;  
+}
+#modal-center___BV_modal_header_ {
+  border: none;
+}
+#modal-center___BV_modal_footer_ {
+  border: none;
 }
 .low-opacity-background {
   background: rgba(22, 0, 56, 0.095);
@@ -284,21 +307,37 @@ input:focus {
   width: 100%;
   border-bottom: 4px solid orange ;
 }
-.signup-form {
-  margin: 70px 0px;
-  width: 100%;
-  border-bottom: 4px solid orange ;
-}
-
-@media only screen and (max-width: 426px) {
-  .card {
-    width: 100%;
-  }
-}
 
 .error-input{
   border:1px solid red !important; 
 }
 .error-text {
   color: red;
+}
+.main-input {
+  border: none;
+  background: #2b3542;
+  color: #fff;
+  border-radius: 7px;
+  padding:  8px 10px;
+  transition: all .3s;
+}
+
+.main-input:focus {  
+  background: #2b3542;  
+  color: #fff;
+
+}
+
+.main-page-content-scroll-area {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 426px) {
+  .card {
+    width: 100%;
+  }
+  .search-input-parent {
+    width: 100% !important;
+  }
 }

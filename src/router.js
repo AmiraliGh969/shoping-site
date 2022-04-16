@@ -10,6 +10,10 @@ import shopCart from './pages/shopCarts/userShopCarts.vue'
 import dashboard from './pages/Dashboard/main-page.vue'
 import allUsers from './components/allUsers.vue'
 import userInformation from './components/singleUserInformation.vue'
+import allProduct from './components/allProductDashboard.vue'
+import singleProductDetailsDashboard from './components/singleProductDetailsDashboard.vue'
+import allShirtsPageDashboard from './components/allShirtsPageDashboard.vue'
+import allShoesPageDashboard from './components/allShoesPageDashboard.vue'
 Vue.use(Router)
 let routes = new Router(
   {
@@ -62,6 +66,22 @@ let routes = new Router(
           {
             path: "/dashboard/userInformation",
             component: userInformation
+          },
+          {
+            path: "/dashboard/allProduct",
+            component: allProduct
+          },
+          {
+            path: "/dashboard/singleProductDetailsDashboard",
+            component: singleProductDetailsDashboard
+          },
+          {
+            path: "/dashboard/shirtPageDashboard",
+            component: allShirtsPageDashboard
+          },
+          {
+            path: "/dashboard/shoesPageDashboard",
+            component: allShoesPageDashboard
           }
         ]
       }
