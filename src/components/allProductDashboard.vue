@@ -75,12 +75,12 @@
 </template>
 <script>
 import InputSlug from "./InputSlug.vue";
-import InputNumber from "./inputNumber.vue";
+// import InputNumber from "./inputNumber.vue";
 
 export default {
   components: {
     InputSlug,
-    InputNumber
+    // InputNumber
   },
 };
 </script>
