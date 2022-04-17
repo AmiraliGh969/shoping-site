@@ -1,11 +1,11 @@
 {
-  "name": "main-project",
-  "version": "0.1.0",
+  "name": "my-vue-app",
   "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -17,7 +17,6 @@
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
     "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.19.2",
     "vue": "^2.6.14",
     "vue-cookie": "^1.1.4",
     "vue-router": "^3.5.3",
@@ -26,37 +25,9 @@
     "vuex-persist": "^3.1.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.2",
-    "@babel/preset-env": "^7.16.11",
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^4.5.15",
-    "@vue/cli-service": "^3.0.0",
-    "@vue/compiler-sfc": "^3.2.23",
     "axios-mock-adapter": "^1.20.0",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.3",
-    "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^7.20.0",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.46.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "@vitejs/plugin-vue": "^2.3.1",
+    "vite": "^2.9.2",
+    "vite-plugin-vue2": "^1.9.3"
+  }
 }

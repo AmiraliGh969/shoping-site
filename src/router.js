@@ -14,6 +14,7 @@ import allProduct from './components/allProductDashboard.vue'
 import singleProductDetailsDashboard from './components/singleProductDetailsDashboard.vue'
 import allShirtsPageDashboard from './components/allShirtsPageDashboard.vue'
 import allShoesPageDashboard from './components/allShoesPageDashboard.vue'
+import allAccessoriesPageDashboard from './components/allAccessoriesPageDashboard.vue'
 Vue.use(Router)
 let routes = new Router(
   {
@@ -82,6 +83,10 @@ let routes = new Router(
           {
             path: "/dashboard/shoesPageDashboard",
             component: allShoesPageDashboard
+          },
+          {
+            path: "/dashboard/accessoriesPageDashboard",
+            component: allAccessoriesPageDashboard
           }
         ]
       }

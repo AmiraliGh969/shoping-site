@@ -1,9 +1,20 @@
 <template>
   <div class="container h-100 overflow-auto scroll-hidden text-start">
-    <div class="row mt-2">
+    <div class="col-md-12 main-dark-background w-100 position-sticky top-0 py-2">
+      <form class="d-flex justify-content-around search-input-parent w-50 py-1">
+        <input
+          class="form-control search-input me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <font-awesome-icon icon="search" class="fa-flip-horizontal text-secondary mt-2 me-3" />
+      </form>
+    </div>
+    <div class="row mt-2 px-5">
       <div class="col-md-12 position-sticky top-0">
         <b-button class="btn-background px-4 text-light" v-b-modal.modal-center>Create a new product</b-button>
-        <b-modal id="modal-center" centered title="add new shirt" class="text-light">
+        <b-modal id="modal-center" centered title="add new shoes" class="text-light">
           <form action="#" class="d-flex flex-column">
             <input-slug
               class="form-control main-input"
@@ -46,7 +57,7 @@
       <div class="col-md-12 text-start">
         <ul v-for="item in 10" :key="item">
           <li class="d-flex justify-content-around my-3 align-items-center low-opacity-background rounded py-2">
-            <font-awesome-icon icon="tshirt" size="4x" class="text-secondary" />
+            <font-awesome-icon icon="shoe-prints" size="4x" class="text-secondary" />
             <div class="d-flex">
               <div class="text-light text-start  lh-5 me-3">
                 <p>ID: ********</p>
