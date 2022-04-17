@@ -1,7 +1,7 @@
 <template>
   <div class="row mt-5 px-5">
-    <div class="col-md-6">
-      <font-awesome-icon icon="user" class="text-secondary h-50" /> 
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+      <font-awesome-icon icon="user"  class="text-secondary w-50 h-50" /> 
     </div>    
     <div class="col-md-6">
       <form action="#" class="d-flex flex-column">

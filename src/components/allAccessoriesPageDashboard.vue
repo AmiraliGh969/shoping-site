@@ -1,5 +1,5 @@
 <template>
-  <div class="container text-start shadow">
+  <div class="container h-100 overflow-auto scroll-hidden text-start">
     <div class="col-md-12 main-dark-background w-100 position-sticky top-0 py-2">
       <form class="d-flex justify-content-around search-input-parent w-50 py-1">
         <input
@@ -14,7 +14,7 @@
     <div class="row mt-2 px-5">
       <div class="col-md-12 position-sticky top-0">
         <b-button class="btn-background px-4 text-light" v-b-modal.modal-center>Create a new product</b-button>
-        <b-modal id="modal-center" centered title="add new product" class="text-light">
+        <b-modal id="modal-center" centered title="add new accessories" class="text-light">
           <form action="#" class="d-flex flex-column">
             <input-slug
               class="form-control main-input"
@@ -54,11 +54,11 @@
           </footer>
         </b-modal>
       </div>
-      <div class="col-md-12 text-start h-100 overflow-auto scroll-hidden">
+      <div class="col-md-12 text-start">
         <ul v-for="item in 10" :key="item">
           <li class="d-flex justify-content-around my-3 align-items-center low-opacity-background rounded py-2">
-            <font-awesome-icon icon="box-open" size="4x" class="text-secondary mx-1" />
-            <div class="d-flex mx-2">
+            <font-awesome-icon icon="gem" size="4x" class="text-secondary" />
+            <div class="d-flex">
               <div class="text-light text-start  lh-5 me-3">
                 <p>ID: ********</p>
                 <p>Tilte: ********</p>
@@ -70,11 +70,11 @@
             </div>
             <div class="h-100">
               <router-link to="/dashboard/singleProductDetailsDashboard">
-                <button class="btn btn-outline-info rounded-circle p-3 h-100 me-1 my-1">
+                <button class="btn btn-outline-info rounded-circle p-3 h-100 me-1">
                 <font-awesome-icon icon="pen" size="lg" />
                 </button>
               </router-link>
-              <button class="btn btn-outline-danger rounded-circle p-3 h-100 ms-1 my-1">
+              <button class="btn btn-outline-danger rounded-circle p-3 h-100 ms-1">
                 <font-awesome-icon icon="trash" size="lg" />
               </button>
             </div>

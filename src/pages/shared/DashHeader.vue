@@ -45,7 +45,9 @@
               <div class="icon-area">
                 <font-awesome-icon icon="gem" />
               </div>
-              <p class="li-text p-0 m-0 ms-3 text-secondary">Accessories</p> 
+              <router-link to="/dashboard/accessoriesPageDashboard">
+                <p class="li-text p-0 m-0 ms-3 text-secondary">Accessories</p> 
+              </router-link>
             </li>
             <label class="text-secondary fs-5 mt-4 " for="user">Sell</label>
             <li id="user" class="d-flex justify-content-start align-items-center mt-1 li-for-dashboard-items">
