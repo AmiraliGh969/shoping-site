@@ -54,7 +54,9 @@
               <div class="icon-area">
                 <font-awesome-icon icon="dollar-sign" />
               </div>
-              <p class="li-text p-0 m-0 ms-3 text-secondary">All Sells</p> 
+              <router-link to="/dashboard/allSells">
+                <p class="li-text p-0 m-0 ms-3 text-secondary">All Sells</p> 
+              </router-link>
             </li>
           </ul>
           <ul class="mx-3">
