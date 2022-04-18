@@ -11,7 +11,7 @@
         <font-awesome-icon icon="search" class="fa-flip-horizontal text-secondary mt-2 me-3" />
       </form>
     </div>
-    <div class="row mt-2 px-5">
+    <div class="row mt-2 px-4">
       <div class="col-md-12 position-sticky top-0">
         <b-button class="btn-background px-4 text-light" v-b-modal.modal-center>Create a new product</b-button>
         <b-modal id="modal-center" centered title="add new accessories" class="text-light">
@@ -57,7 +57,7 @@
       <div class="col-md-12 text-start">
         <ul v-for="item in 10" :key="item">
           <li class="d-flex justify-content-around my-3 align-items-center low-opacity-background rounded py-2">
-            <font-awesome-icon icon="gem" size="4x" class="text-secondary" />
+            <font-awesome-icon icon="gem" size="4x" class="text-secondary mx-2" />
             <div class="d-flex">
               <div class="text-light text-start  lh-5 me-3">
                 <p>ID: ********</p>
@@ -70,11 +70,11 @@
             </div>
             <div class="h-100">
               <router-link to="/dashboard/singleProductDetailsDashboard">
-                <button class="btn btn-outline-info rounded-circle p-3 h-100 me-1">
+                <button class="btn btn-outline-info rounded-circle p-3 h-100 me-1 my-1">
                 <font-awesome-icon icon="pen" size="lg" />
                 </button>
               </router-link>
-              <button class="btn btn-outline-danger rounded-circle p-3 h-100 ms-1">
+              <button class="btn btn-outline-danger rounded-circle p-3 h-100 ms-1 my-1">
                 <font-awesome-icon icon="trash" size="lg" />
               </button>
             </div>
