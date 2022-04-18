@@ -1,5 +1,6 @@
 <template>
-  <div class="row mt-5 px-5">
+  <div class="row mt-2 px-4">
+    <div class="alert alert-danger mb-3">You can create problems for the user by making changes in this section, please be careful</div>
     <div class="col-md-6 d-flex justify-content-center align-items-center">
       <font-awesome-icon icon="user"  class="text-secondary w-50 h-50" /> 
     </div>    
@@ -83,7 +84,7 @@
         <div class="d-flex">
           <router-link to="/dashboard/allUsers" class="w-50 me-1">
             <div class="btn btn-outline-danger w-100">
-              Cancel and Back
+              Back
             </div>
           </router-link>
           <button class="btn btn-outline-info w-75 ms-1">Add Changes</button>

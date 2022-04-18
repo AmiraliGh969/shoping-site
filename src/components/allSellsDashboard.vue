@@ -32,13 +32,25 @@
     <div class="row justify-content-around text-start mt-5 ">
       <div class="col-md-7 shadow rounded my-3">
         <h4 class="text-light"><strong>Notification</strong></h4>
-        <div class="overflow-auto scroll-hidden height-220">          
-          <div class="low-opacity-background d-flex align-items-center mt-1 p-2">
-            <font-awesome-icon icon="bell" class="text-info" size="2x" />
-            <span>
-              <h5 class="ms-3 m-0 p-0 text-light">you have a message</h5>
-            </span>
-          </div>
+        <div class="overflow-auto scroll-hidden height-220">
+          <ul v-for="item in 10" :key="item">
+            <li>
+              <div class="low-opacity-background d-flex align-items-center mt-2 p-2">
+                <font-awesome-icon icon="bell" class="text-info" size="lg" />
+                <span>
+                  <h5 class="ms-3 m-0 p-0 text-light">you have a message</h5>
+                </span>
+              </div>
+            </li> 
+            <li>
+              <div class="low-opacity-background d-flex align-items-center mt-2 p-2">
+                <font-awesome-icon icon="bell" class="text-info" size="lg" />
+                <span>
+                  <h5 class="ms-3 m-0 p-0 text-light">you have a order</h5>
+                </span>
+              </div>
+            </li> 
+          </ul>          
         </div>
       </div>
       <div class="col-md-4 shadow rounded my-3">

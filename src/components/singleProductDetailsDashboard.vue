@@ -1,5 +1,6 @@
 <template>
-  <div class="row mt-3">
+  <div class="row mt-3 px-3">
+    <div class="alert alert-danger my-3">You can create problems for the user by making changes in this section, please be careful</div>
     <div class="col-md-6 d-flex align-items-center justify-content-center">
       <font-awesome-icon icon="box-open" class="text-secondary h-50 w-50" /> 
     </div>    

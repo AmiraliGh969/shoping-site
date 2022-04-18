@@ -11,7 +11,7 @@
         <font-awesome-icon icon="search" class="fa-flip-horizontal text-secondary mt-2 me-3" />
       </form>
     </div>
-    <div class="row mt-2 px-5">
+    <div class="row mt-2 px-4">
       <div class="col-md-12 position-sticky top-0">
         <b-button class="btn-background px-4 text-light" v-b-modal.modal-center>Create a new product</b-button>
         <b-modal id="modal-center" centered title="add new product" class="text-light">
