@@ -1,7 +1,15 @@
 <template>
-  <div class="container-fluid header-parent">
-    <div class="row justify-content-around align-items-center py-3">
-      <div class="col-md-6 col-6 align-items-center">
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center py-3">
+      <div class="col-md-3 col-3">
+        <!-- <a class="header-logo-parent" href="index.vue">
+          <img
+            class="header-logo"
+            src="https://i0.wp.com/www.ecommerce-nation.com/wp-content/uploads/2018/01/dotSTORE.png?fit=842%2C289&ssl=1"
+          />
+        </a> -->
+      </div>    
+      <div class="col-md-6 col-6">
         <ul class="nav">
           <li class="mx-2 link">
             <router-link to="/signup">
@@ -17,16 +25,8 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-3 col-3 text-start">
-        <a class="header-logo-parent" href="index.vue">
-          <img
-            class="header-logo"
-            src="https://i0.wp.com/www.ecommerce-nation.com/wp-content/uploads/2018/01/dotSTORE.png?fit=842%2C289&ssl=1"
-          />
-        </a>
-      </div>
     </div>
-    <div class="row item-header-border">
+    <div class="row">
       <div class="col-md-3 item-header-bar">
         <ul class="nav justify-content-around">
           <li class="link">

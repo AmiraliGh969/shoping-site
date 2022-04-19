@@ -1,6 +1,7 @@
 <template>
   <div class="container h-100 overflow-auto scroll-hidden">
-    <div class="col-md-12 main-dark-background w-100 position-sticky top-0 py-2">
+    <div class="row w-100 position-sticky top-0">
+      <portal to="destination">
         <form class="d-flex justify-content-around search-input-parent w-50 py-1">
           <input
             class="form-control search-input me-2"
@@ -10,6 +11,7 @@
           />
           <font-awesome-icon icon="search" class="fa-flip-horizontal text-secondary mt-2 me-3" />
         </form>
+      </portal>
     </div>
     <div class="row px-3">
       <div class="col-md-6">

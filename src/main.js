@@ -9,6 +9,7 @@ import BootstrapVue from "bootstrap-vue";
 // import Vuelidate from 'vuelidate'
 import VueCookie from 'vue-cookie'
 import Price from './components/Price.vue'
+import PortalVue from 'portal-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -46,6 +47,7 @@ Vue.component('price', Price)
 Vue.use(BootstrapVue);
 // Vue.use(Vuelidate);
 Vue.use(VueCookie);
+Vue.use(PortalVue)
 
 new Vue({
   el: '#app',
